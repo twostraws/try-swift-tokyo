@@ -5,13 +5,14 @@ struct SectionHeader: HTML {
   let language: SupportedLanguage
 
   var body: some HTML {
-    ZStack(alignment: .center) {
-      Border(hex: "#6f42c1")
+    VStack {
       Text(String(type.rawValue, language: language))
         .horizontalAlignment(.center)
         .font(.title1)
         .fontWeight(.bold)
         .foregroundStyle(.bootstrapPurple)
+
+      Border(hex: "#6f42c1")
     }
     .padding(.top, .px(80))
     .padding(.bottom, .px(16))

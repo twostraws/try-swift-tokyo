@@ -64,7 +64,7 @@ extension HomeSectionType {
         .margin(.top, .px(32))
 
       Alert {
-        speakers.map { speaker in
+        ForEach(speakers) { speaker in
           SpeakerModal(speaker: speaker, language: language)
         }
       }

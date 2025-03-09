@@ -29,8 +29,8 @@ struct TicketsComponent: HTML {
       .target(.newWindow)
       .linkStyle(.button)
       .role(.light)
-      .font(.lead)
-      .fontWeight(.medium)
+//      .font(.lead)
+//      .fontWeight(.medium)
       .foregroundStyle(.orangeRed)
     }.horizontalAlignment(.center)
   }

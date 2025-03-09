@@ -1,6 +1,6 @@
 import Ignite
 
-struct HeaderComponent: RootHTML {
+struct HeaderComponent: DocumentElement {
   let language: SupportedLanguage
 
   var body: some HTML {
@@ -32,7 +32,6 @@ struct HeaderComponent: RootHTML {
             .foregroundStyle(.bootstrapPurple)
             .margin(.bottom, .percent(2%))
         }
-        .horizontalAlignment(.center)
         .ignorePageGutters(false)
       }
     }.background(.darkBlue)

@@ -1,25 +1,21 @@
 import Ignite
 
 struct MainLayout: Layout {
-  @Environment(\.siteConfiguration) private var siteConfiguration
+  @Environment(\.page) var page
   let title: String
   let ogpLink: String
 
   var body: some HTML {
-    HTMLDocument {
-      HTMLHead(for: page, with: siteConfiguration) {
-        MetaTag(property: "og:image", content: ogpLink)
-        MetaTag(name: "twitter:title", content: title)
-        MetaTag(name: "twitter:image", content: ogpLink)
+    Head {
+      MetaTag(property: "og:image", content: ogpLink)
+      MetaTag(name: "twitter:title", content: title)
+      MetaTag(name: "twitter:image", content: ogpLink)
 
-        if page.url.pathComponents.last == "_en" {
-          RedirectMetaTag(to: URL(string: page.url.absoluteString.replacingOccurrences(of: "_", with: ""))!)
-        }
+      if page.url.pathComponents.last == "_en" {
+        RedirectMetaTag(to: URL(string: page.url.absoluteString.replacingOccurrences(of: "_", with: ""))!)
       }
-
-      HTMLBody {
-        Section(page.body)
-      }.class("container")
     }
+
+    Body()
   }
 }

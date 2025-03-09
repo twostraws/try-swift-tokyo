@@ -2,7 +2,7 @@ import Foundation
 import Ignite
 import SharedModels
 
-struct TimetableComponent: RootHTML {
+struct TimetableComponent: DocumentElement {
   let conference: Conference
   private let imageSize = 50
 

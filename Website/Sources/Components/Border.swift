@@ -1,7 +1,6 @@
 import Ignite
 
-struct Border: BlockHTML {
-  var columnWidth = ColumnWidth.automatic
+struct Border: HTML {
   var hex: String
 
   var body: some HTML {

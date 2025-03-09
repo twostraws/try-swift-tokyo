@@ -1,6 +1,6 @@
 import Ignite
 
-struct LanguageSelector: HTML, InlineHTML {
+struct LanguageSelector: InlineElement {
   let path: (SupportedLanguage) -> String
   let currentLanguage: SupportedLanguage
 
