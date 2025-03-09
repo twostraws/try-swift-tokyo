@@ -15,10 +15,10 @@ struct HeaderComponent: DocumentElement {
           Image("/images/title.png", description: "title image")
             .resizable()
             .aspectRatio(260 / 100, contentMode: .fit)
-            .frame(width: .percent(50%))
+            .frame(width: .percent(50%), alignment: .center)
             .margin(.top, .px(100))
         }
-        .frame(width: .percent(100%))
+        .frame(width: .percent(100%), alignment: .center)
         .ignorePageGutters(false)
         ZStack(alignment: .bottom) {
           Section {

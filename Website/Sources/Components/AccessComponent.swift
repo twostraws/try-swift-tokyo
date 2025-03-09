@@ -63,7 +63,7 @@ struct AccessComponent: DocumentElement {
             .foregroundStyle(.white)
         }.margin(.top, .px(160))
       }
-      .frame(width: .percent(100%))
+      .frame(width: .percent(100%), alignment: .center)
       .ignorePageGutters(false)
     }
     .background(
